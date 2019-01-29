@@ -21,15 +21,11 @@ export class IconCollectionService {
         iconsArray[1].forEach((entry) => {
           const icon = new Icon();
           icon.id = entry._id;
-          icon.label = entry.label;
-          icon.category = entry.category;
-          icon.html = entry.html;
-          icon.htmlMarkup = entry.htmlMarkup;
-          icon.htmlMarkupBefore = entry.htmlMarkupBefore;
-          icon.htmlMarkupAfter = entry.htmlMarkupAfter;
+          icon.name = entry.name;
+          icon.classNames = entry.classNames;
           icon.htmlChildMarkup = entry.htmlChildMarkup;
-          icon.htmlChildMarkupBefore = entry.htmlChildMarkupBefore;
-          icon.htmlChildMarkupAfter = entry.htmlChildMarkupAfter;
+          icon.cssHidden = entry.cssHidden;
+          icon.tag = entry.tag;
           finalIcons.push(icon);
         });
 

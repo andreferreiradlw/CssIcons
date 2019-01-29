@@ -11,8 +11,11 @@
     <p>Icons:</p>
     <div class="icons-container">
       <mat-card *ngFor="let icon of iconCollection" class="icon-card">
-        <mat-card-content [innerHTML]="icon.html">
+        <mat-card-content matTooltip="{{icon.name}}" matTooltipPosition="above">
           <!-- Icon goes here -->
+          <div class="icon" [ngClass]="icon.classNames">
+            <i *ngIf="icon.htmlChildMarkup"></i>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>

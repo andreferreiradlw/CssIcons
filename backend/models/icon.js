@@ -3,15 +3,12 @@ const mongoose = require('mongoose');
 
 // https://mongoosejs.com/docs/index.html
 const iconSchema = mongoose.Schema({
-  label: { type: String, required: true },
-  category: { type: String, required: true },
-  html: { type: String, required: true},
-  htmlMarkup: { type: String, required: true },
-  htmlMarkupBefore: { type: String, required: false },
-  htmlMarkupAfter: { type: String, required: false },
-  htmlChildMarkup: { type: String, required: false },
-  htmlChildMarkupBefore: { type: String, required: false },
-  htmlChildMarkupAfter: { type: String, required: false }
+  name: { type: String, required: true },
+  classNames: { type: String, required: true },
+  htmlChildMarkup: { type: Boolean, required: true},
+  style: { type: String, required: false },
+  cssHidden: { type: String, required: false },
+  tag: [String]
 });
 
 module.exports = mongoose.model('Icon', iconSchema);

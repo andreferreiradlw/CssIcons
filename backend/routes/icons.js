@@ -22,15 +22,12 @@ router.get('', (req, res) => {
 router.post('', (req, res) => {
   //create new icon object
   const icon = new Icon({
-    label: req.body.label,
-    category: req.body.category,
-    html: req.body.html,
-    htmlMarkup: req.body.htmlMarkup,
-    htmlMarkupBefore: req.body.htmlMarkupBefore,
-    htmlMarkupAfter: req.body.htmlMarkupAfter,
+    name: req.body.name,
+    classNames: req.body.classNames,
     htmlChildMarkup: req.body.htmlChildMarkup,
-    htmlChildMarkupBefore: req.body.htmlChildMarkupBefore,
-    htmlChildMarkupAfter: req.body.htmlChildMarkupAfter
+    style: req.body.style,
+    tag: req.body.tag,
+    cssHidden: req.body.cssHidden
   });
   // save to mongoDB
   icon.save().then(createdIcon => {
@@ -38,15 +35,12 @@ router.post('', (req, res) => {
       message: 'Icon added successfully!',
       post: {
         id: createdIcon._id,
-        label: createdIcon.label,
-        category: createdIcon.category,
-        html: createdIcon.html,
-        htmlMarkup: createdIcon.htmlMarkup,
-        htmlMarkupBefore: createdIcon.htmlMarkupBefore,
-        htmlMarkupAfter: createdIcon.htmlMarkupAfter,
+        name: createdIcon.name,
+        classNames: createdIcon.classNames,
         htmlChildMarkup: createdIcon.htmlChildMarkup,
-        htmlChildMarkupBefore: createdIcon.htmlChildMarkupBefore,
-        htmlChildMarkupAfter: createdIcon.htmlChildMarkupAfter
+        style: createdIcon.style,
+        tag: createdIcon.tag,
+        cssHidden: createdIcon.cssHidden
       }
     });
   })
