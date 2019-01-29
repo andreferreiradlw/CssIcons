@@ -1,0 +1,53 @@
+.sidenav-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.icons-container {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.icon-card {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+mat-sidenav {
+  width: 100%;
+}
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Larger desktop */
+@media (min-width: 1200px) {
+
+}
+/* Large desktop */
+@media (min-width: 980px) {
+
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) {
+  mat-sidenav {
+    width: 30%;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
