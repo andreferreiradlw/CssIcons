@@ -9,6 +9,21 @@
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: auto;
+  padding: 5px 16px 0;
+}
+.mat-form-field-infix {
+  width: auto;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 350px;
+  width: 50%;
+}
+.example-full-width {
+  width: 100%;
+}
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -16,7 +31,6 @@
   justify-content: center;
   min-width: 100%;
   min-height: 100vh;
-
 }
 .icons-container {
   background-color: white;
@@ -24,7 +38,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  min-width: 100%;
+  width: 100%;
   flex-grow: 2;
 }
 .icon-card {
@@ -49,20 +63,24 @@ mat-card-content {
 
 /* Larger desktop */
 @media (min-width: 1200px) {
-
+  mat-sidenav {
+    width: 25%;
+  }
 }
 /* Large desktop */
-@media (min-width: 980px) {
-
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) {
+@media (min-width: 980px) and (max-width: 1199px) {
   mat-sidenav {
     width: 35%;
   }
 }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  mat-sidenav {
+    width: 45%;
+  }
+}
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
 
 }
 /* Landscape phones and down */

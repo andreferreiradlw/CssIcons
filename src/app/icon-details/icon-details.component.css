@@ -49,9 +49,9 @@
 /*CHANGE DISPLAY TOP ICON STYLES ON HOVER*/
 .icon-show-container .cssHover {
   /*color: #673AB7 !important;*/
-  border-color: #673AB7 !important;
+  border-color: rgb(174, 169, 182) !important;
 }
 .icon-show-container .cssHoverBefore::before,
 .icon-show-container .cssHoverAfter::after {
-  background-color: #673AB7 !important;
+  background-color: rgb(174, 169, 182) !important;
 }

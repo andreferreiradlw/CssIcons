@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit {
   events: string[] = [];
   sidenavOpened: boolean;
+  searchTerm: string;
   // icon collection
   iconCollection: Icon[] = [];
   private iconSub: Subscription;
@@ -36,6 +37,14 @@ export class AppComponent implements OnInit {
         this.iconCollection = iconData;
         console.log(this.iconCollection);
       });
+  }
+  onContainerClick(event: any) {
+    const target = event.target || event.srcElement || event.currentTarget;
+    const idAttr = target.attributes.id;
+    const value = idAttr.nodeValue;
+    if (value === 'icons-container' && this.sidenavOpened) {
+      this.sidenavOpened = !this.sidenavOpened;
+    }
   }
   onIconClick(iconSelected: Icon) {
     if (this.emitIcon === iconSelected) {

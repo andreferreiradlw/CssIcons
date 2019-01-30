@@ -8,11 +8,13 @@ import { MaterialModule } from '../material-module';
 
 import { AppComponent } from './app.component';
 import { IconDetailsComponent } from './icon-details/icon-details.component';
+import { IconFilterPipe } from './iconFilter.pipe';
 
 @NgModule({
    declarations: [
       AppComponent,
-      IconDetailsComponent
+      IconDetailsComponent,
+      IconFilterPipe
    ],
    imports: [
       BrowserModule,
