@@ -25,7 +25,13 @@ export class IconCollectionService {
           icon.classNames = entry.classNames;
           icon.htmlChildMarkup = entry.htmlChildMarkup;
           icon.cssHidden = entry.cssHidden;
-          icon.tag = entry.tag;
+          icon.tags = entry.tags;
+          icon.cssMarkup = entry.cssMarkup;
+          icon.cssMarkupBefore = entry.cssMarkupBefore;
+          icon.cssMarkupAfter = entry.cssMarkupAfter;
+          icon.cssChildMarkup = entry.cssChildMarkup;
+          icon.cssChildMarkupBefore = entry.cssChildMarkupBefore;
+          icon.cssChildMarkupAfter = entry.cssChildMarkupAfter;
           finalIcons.push(icon);
         });
 

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 html {
   box-sizing: border-box;
 }
@@ -8,7 +8,6 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-family: 'Belwe';
   margin: 0;
   padding: 0;
 }

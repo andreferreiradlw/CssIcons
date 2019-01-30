@@ -8,7 +8,13 @@ const iconSchema = mongoose.Schema({
   htmlChildMarkup: { type: Boolean, required: true},
   style: { type: String, required: false },
   cssHidden: { type: String, required: false },
-  tag: [String]
+  tags: [String],
+  cssMarkup: { type: String, required: false },
+  cssMarkupBefore: { type: String, required: false },
+  cssMarkupAfter: { type: String, required: false },
+  cssChildMarkup: { type: String, required: false },
+  cssChildMarkupBefore: { type: String, required: false },
+  cssChildMarkupAfter: { type: String, required: false }
 });
 
 module.exports = mongoose.model('Icon', iconSchema);

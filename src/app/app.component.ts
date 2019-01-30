@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   events: string[] = [];
-  opened: boolean;
+  sidenavOpened: boolean;
   // icon collection
   iconCollection: Icon[] = [];
   private iconSub: Subscription;

@@ -26,8 +26,14 @@ router.post('', (req, res) => {
     classNames: req.body.classNames,
     htmlChildMarkup: req.body.htmlChildMarkup,
     style: req.body.style,
-    tag: req.body.tag,
-    cssHidden: req.body.cssHidden
+    tags: req.body.tags,
+    cssHidden: req.body.cssHidden,
+    cssMarkup: req.body.cssMarkup,
+    cssMarkupBefore: req.body.cssMarkupBefore,
+    cssMarkupAfter: req.body.cssMarkupAfter,
+    cssChildMarkup: req.body.cssChildMarkup,
+    cssChildMarkupBefore: req.body.cssChildMarkupBefore,
+    cssChildMarkupAfter: req.body.cssChildMarkupAfter
   });
   // save to mongoDB
   icon.save().then(createdIcon => {
@@ -39,8 +45,14 @@ router.post('', (req, res) => {
         classNames: createdIcon.classNames,
         htmlChildMarkup: createdIcon.htmlChildMarkup,
         style: createdIcon.style,
-        tag: createdIcon.tag,
-        cssHidden: createdIcon.cssHidden
+        tags: createdIcon.tags,
+        cssHidden: createdIcon.cssHidden,
+        cssMarkup: createdIcon.cssMarkup,
+        cssMarkupBefore: createdIcon.cssMarkupBefore,
+        cssMarkupAfter: createdIcon.cssMarkupAfter,
+        cssChildMarkup: createdIcon.cssChildMarkup,
+        cssChildMarkupBefore: createdIcon.cssChildMarkupBefore,
+        cssChildMarkupAfter: createdIcon.cssChildMarkupAfter
       }
     });
   })
