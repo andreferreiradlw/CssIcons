@@ -4,7 +4,7 @@ export class Icon {
   classNames: string;
   htmlChildMarkup: boolean;
   cssHidden: string;
-  tag: string[];
+  tags: string[];
   cssMarkup: string;
   cssMarkupBefore: string;
   cssMarkupAfter: string;

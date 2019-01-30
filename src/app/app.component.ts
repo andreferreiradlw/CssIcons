@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   // icon collection
   iconCollection: Icon[] = [];
   private iconSub: Subscription;
+  emitIcon: Icon;
   // responsive
   screenWidth: number;
 
@@ -36,6 +37,12 @@ export class AppComponent implements OnInit {
         console.log(this.iconCollection);
       });
   }
-  setIconStyles() {
+  onIconClick(iconSelected: Icon) {
+    if (this.emitIcon === iconSelected) {
+      this.sidenavOpened = !this.sidenavOpened;
+    } else {
+      this.emitIcon = iconSelected;
+      this.sidenavOpened = true;
+    }
   }
 }

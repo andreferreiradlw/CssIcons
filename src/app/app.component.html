@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav [mode]="(screenWidth > 768) ? 'side' : 'over'" position="end" [(opened)]="sidenavOpened">
-    <app-icon-details></app-icon-details>
+    <app-icon-details [iconSelected]="emitIcon"></app-icon-details>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -17,7 +17,7 @@
       </p>
       <div class="icons-container">
         <div *ngFor="let icon of iconCollection">
-          <mat-card class="icon-card" matTooltip="{{icon.name}}" matTooltipPosition="above">
+          <mat-card class="icon-card" matTooltip="{{icon.name}}" matTooltipPosition="above" (click)="onIconClick(icon)">
             <mat-card-content>
               <!-- Icon goes here -->
               <div class="icon" [ngClass]="icon.classNames">

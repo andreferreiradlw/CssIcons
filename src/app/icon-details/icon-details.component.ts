@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
+import { Icon } from '../icons.model';
 
 @Component({
   selector: 'app-icon-details',
   templateUrl: './icon-details.component.html',
   styleUrls: ['./icon-details.component.css']
 })
-export class IconDetailsComponent implements OnInit {
+export class IconDetailsComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  @Input() iconSelected: Icon;
+  // icon var
+  iconShow: any;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  ngOnChanges(changes: { [propName: string]: SimpleChange }) {
+    // detect changes
+    if ( changes['iconSelected'] && changes['iconSelected'].previousValue !== changes['iconSelected'].currentValue ) {
+      // if changes @Input() iconSelected
+      this.iconShow = changes['iconSelected'].currentValue;
+    }
   }
 
 }
