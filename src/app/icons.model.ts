@@ -13,4 +13,9 @@ export class Icon {
   cssChildMarkupAfter: string;
 
   constructor() {}
+
+  formattedName() {
+    const iconName = this.name.toLowerCase();
+    return iconName.charAt(0).toUpperCase() + iconName.slice(1);
+  }
 }

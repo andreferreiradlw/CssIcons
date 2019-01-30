@@ -1,6 +1,35 @@
-<div *ngIf="iconShow">
-  <p>{{iconShow.name}}</p>
-  <p>{{iconShow.classNames}}</p>
+<div class="icon-details-container" *ngIf="iconShow">
+  <div class="icon-show-container">
+    <div class="icon {{iconShow.classNames}}"
+      [ngClass]="[cssMarkupHover ? 'cssHover' : '', cssMarkupBeforeHover ? 'cssHoverBefore' : '', cssMarkupAfterHover ? 'cssHoverAfter' : '']">
+      <i *ngIf="iconShow.htmlChildMarkup"
+        [ngClass]="[cssChildMarkupHover ? 'cssHover' : '', cssChildMarkupBeforeHover ? 'cssHoverBefore' : '', cssChildMarkupAfterHover ? 'cssHoverAfter' : '']"></i>
+    </div>
+  </div>
+  <div class="icon-info-container">
+    <h2>{{iconShow.formattedName()}} Icon</h2>
+    <p><b>{{htmlMarkup}}</b></p>
+    <div class="icon-markup-container">
+      <div *ngIf="iconShow.cssMarkup" class="cssMarkup" (mouseover)="cssMarkupHover = true" (mouseout)="cssMarkupHover = false">
+        <p [innerHTML]="iconShow.cssMarkup"></p>
+      </div>
+      <div *ngIf="iconShow.cssMarkupBefore" class="cssMarkup" (mouseover)="cssMarkupBeforeHover = true" (mouseout)="cssMarkupBeforeHover = false">
+        <p [innerHTML]="iconShow.cssMarkupBefore"></p>
+      </div>
+      <div *ngIf="iconShow.cssMarkupAfter" class="cssMarkup" (mouseover)="cssMarkupAfterHover = true" (mouseout)="cssMarkupAfterHover = false">
+        <p [innerHTML]="iconShow.cssMarkupAfter"></p>
+      </div>
+      <div *ngIf="iconShow.cssChildMarkup" class="cssMarkup" (mouseover)="cssChildMarkupHover = true" (mouseout)="cssChildMarkupHover = false">
+        <p [innerHTML]="iconShow.cssChildMarkup"></p>
+      </div>
+      <div *ngIf="iconShow.cssChildMarkupBefore" class="cssMarkup" (mouseover)="cssChildMarkupBeforeHover = true" (mouseout)="cssChildMarkupBeforeHover = false">
+        <p [innerHTML]="iconShow.cssChildMarkupBefore"></p>
+      </div>
+      <div *ngIf="iconShow.cssChildMarkupAfter" class="cssMarkup" (mouseover)="cssChildMarkupAfterHover = true" (mouseout)="cssChildMarkupAfterHover = false">
+        <p [innerHTML]="iconShow.cssChildMarkupAfter"></p>
+      </div>
+    </div>
+  </div>
 </div>
 
 

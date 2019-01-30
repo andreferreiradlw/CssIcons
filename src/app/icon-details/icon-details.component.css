@@ -1,0 +1,57 @@
+.icon-details-container {
+  background-color: #673AB7;
+  min-height: 100%;
+  padding: 15px;
+}
+.icon-show-container {
+  background-color: white;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+  border-radius: 5px;
+}
+.icon-show-container .icon {
+  zoom: 400%;
+}
+.icon-info-container {
+  background-color: white;
+  width: 92.5%;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.icon-info-container h2 {
+  margin: 5px;
+}
+.cssMarkup {
+  padding: 5px;
+  margin: 0;
+}
+.cssMarkup p {
+  white-space: pre-wrap;
+  margin: 0;
+}
+.cssMarkup:hover {
+  background-color: #673AB7;
+  color: white;
+}
+/*CHANGE DISPLAY TOP ICON STYLES ON HOVER*/
+.icon-show-container .cssHover {
+  /*color: #673AB7 !important;*/
+  border-color: #673AB7 !important;
+}
+.icon-show-container .cssHoverBefore::before,
+.icon-show-container .cssHoverAfter::after {
+  background-color: #673AB7 !important;
+}

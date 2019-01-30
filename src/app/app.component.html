@@ -17,7 +17,7 @@
       </p>
       <div class="icons-container">
         <div *ngFor="let icon of iconCollection">
-          <mat-card class="icon-card" matTooltip="{{icon.name}}" matTooltipPosition="above" (click)="onIconClick(icon)">
+          <mat-card class="icon-card" matTooltip="{{icon.formattedName()}}" matTooltipPosition="above" (click)="onIconClick(icon)">
             <mat-card-content>
               <!-- Icon goes here -->
               <div class="icon" [ngClass]="icon.classNames">
