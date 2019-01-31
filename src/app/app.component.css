@@ -37,14 +37,18 @@
   min-height: 100vh;
 }
 .icons-container {
-  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.icons-container-inner {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 1% 0;
+  padding: 3% 0;
   width: 100%;
-  flex-grow: 2;
 }
 .icon-card {
   width: 70px;

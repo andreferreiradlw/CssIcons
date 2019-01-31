@@ -42,8 +42,10 @@ export class AppComponent implements OnInit {
     const target = event.target || event.srcElement || event.currentTarget;
     const idAttr = target.attributes.id;
     const value = idAttr.nodeValue;
-    if (value === 'icons-container' && this.sidenavOpened) {
-      this.sidenavOpened = !this.sidenavOpened;
+    if (value === 'icons-container' || value === 'icons-container-inner') {
+      if(this.emitIcon !== undefined) {
+        this.sidenavOpened = !this.sidenavOpened;
+      }
     }
   }
   onIconClick(iconSelected: Icon) {

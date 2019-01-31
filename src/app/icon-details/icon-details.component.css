@@ -6,12 +6,13 @@
 .icon-show-container {
   background-color: white;
   width: 100%;
-  height: 150px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+  margin-top: 20px;
 }
 .icon-show-container .icon {
   zoom: 400%;
@@ -32,7 +33,7 @@
 }
 .codepen-button:hover {
   color: white;
-  background-color: black;
+  background-color: #673AB7;
 }
 .codepen-button:hover svg {
   stroke: white;
@@ -79,9 +80,15 @@
 /*CHANGE DISPLAY TOP ICON STYLES ON HOVER*/
 .icon-show-container .cssHover {
   /*color: #673AB7 !important;*/
-  border-color: rgb(174, 169, 182) !important;
+  color: #673AB7 !important;
 }
+.icon-show-container .cssHover:before,
+.icon-show-container .cssHover:after {
+  /*color: #673AB7 !important;*/
+  color: white !important;
+}
+
 .icon-show-container .cssHoverBefore::before,
 .icon-show-container .cssHoverAfter::after {
-  background-color: rgb(174, 169, 182) !important;
+  color: #673AB7 !important;
 }
