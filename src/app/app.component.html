@@ -6,36 +6,30 @@
 
   <mat-sidenav-content>
     <div class="flex-container">
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" id="header">
         <h1><b>CSS Icons</b></h1>
         <!-- This fills the remaining space of the current row -->
         <span class="fill-remaining-space"></span>
-
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Search" [(ngModel)]="searchTerm" name="searchFilter">
-            <mat-icon matSuffix>search</mat-icon>
-          </mat-form-field>
-        </form>
       </mat-toolbar>
-      <p>
-        <mat-checkbox [(ngModel)]="sidenavOpened">sidenav.opened</mat-checkbox>
-      </p>
+      <mat-form-field class="search-container">
+        <input matInput placeholder="Search Icons" [(ngModel)]="searchTerm" name="searchFilter">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
       <div class="icons-container" (click)="onContainerClick($event)" id="icons-container">
-        <div *ngFor="let icon of iconCollection | iconFilter: searchTerm">
-          <mat-card class="icon-card" matTooltip="{{icon.formattedName()}}" matTooltipPosition="above" (click)="onIconClick(icon)">
-            <mat-card-content>
+        <div id="icon-card-collection" *ngFor="let icon of iconCollection | iconFilter: searchTerm">
+          <mat-card id="icon-card" class="icon-card" matTooltip="{{icon.formattedName()}}" matTooltipPosition="above" (click)="onIconClick(icon)">
+            <mat-card-content id="icon-card-content">
               <!-- Icon goes here -->
-              <div class="icon" [ngClass]="icon.classNames">
+              <div id="icon" class="icon" [ngClass]="icon.classNames">
                 <i *ngIf="icon.htmlChildMarkup"></i>
               </div>
             </mat-card-content>
           </mat-card>
         </div>
       </div>
-      <mat-toolbar color="primary">
-        <span>Built by Andre. Inspired by Wenting Zhang.</span>
-      </mat-toolbar>
+      <div id="footer">
+        <p><b>Built by Andre. Inspired by Wenting Zhang.</b></p>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

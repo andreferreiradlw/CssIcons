@@ -22,6 +22,7 @@ export class IconDetailsComponent implements OnInit, OnChanges {
   cssChildMarkupAfterHover = false;
   // strings
   htmlMarkup: string;
+  codepenData: any;
 
   constructor() {}
 
@@ -37,7 +38,25 @@ export class IconDetailsComponent implements OnInit, OnChanges {
       } else {
         this.htmlMarkup = '<div class="icon ' + this.iconShow.classNames + '"></div>';
       }
+      const styleData = {
+        title              : 'CSS Icon: ' + this.iconShow.name,
+        // tslint:disable-next-line:max-line-length
+        description        : this.iconShow.name + ' icon animation created with pure CSS, CSS ICON animation created via http://cssicons.io/',
+        html               : this.htmlMarkup,
+        css                : this.generateCSS()
+      };
+      this.codepenData = JSON.stringify(styleData);
     }
+  }
+  generateCSS() {
+    const styles =
+      this.iconShow.cssMarkup + '\n' +
+      this.iconShow.cssMarkupBefore + '\n' +
+      this.iconShow.cssMarkupAfter + '\n' +
+      this.iconShow.cssChildMarkup + '\n' +
+      this.iconShow.cssChildMarkupBefore + '\n' +
+      this.iconShow.cssChildMarkupAfter;
+    return styles;
   }
 
 }

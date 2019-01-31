@@ -1,7 +1,7 @@
 .icon-details-container {
-  background-color: #673AB7;
+  background-color: white;
   min-height: 100%;
-  padding: 15px;
+  padding: 0 15px 15px;
 }
 .icon-show-container {
   background-color: white;
@@ -11,28 +11,57 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
   position: relative;
-  border-radius: 5px;
 }
 .icon-show-container .icon {
   zoom: 400%;
 }
+.codepen-button {
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px
+}
+.codepen-button:hover {
+  color: white;
+  background-color: black;
+}
+.codepen-button:hover svg {
+  stroke: white;
+}
+.codepen-button h5 {
+  display: inline;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.codepen-button svg {
+  height: 20px;
+}
 .icon-info-container {
   background-color: white;
-  width: 92.5%;
-  margin: 15px auto;
-  padding: 15px;
-  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px 25px;
   position: absolute;
-  top: 160px;
+  top: 190px;
   left: 0;
   right: 0;
   bottom: 0;
   overflow: auto;
 }
-.icon-info-container h2 {
-  margin: 5px;
+.icon-info-container h2,
+.icon-info-container p {
+  padding: 5px 0;
+  margin: 0;
 }
 .cssMarkup {
   padding: 5px;
@@ -45,6 +74,7 @@
 .cssMarkup:hover {
   background-color: #673AB7;
   color: white;
+  cursor: pointer;
 }
 /*CHANGE DISPLAY TOP ICON STYLES ON HOVER*/
 .icon-show-container .cssHover {

@@ -4,6 +4,14 @@
   margin: 0;
   padding: 0;
 }
+#header h1 {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+#footer p {
+  font-size: 0.9rem;
+  color: rgb(103, 58, 183);
+}
 .fill-remaining-space {
   /* This fills the remaining space, by using flexbox.
      Every toolbar row uses a flexbox row layout. */
@@ -16,13 +24,9 @@
 .mat-form-field-infix {
   width: auto;
 }
-.example-form {
-  min-width: 150px;
-  max-width: 350px;
-  width: 50%;
-}
-.example-full-width {
-  width: 100%;
+.search-container {
+  width: 70%;
+  margin: 3% 0 1%;
 }
 .flex-container {
   display: flex;
@@ -38,6 +42,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding: 1% 0;
   width: 100%;
   flex-grow: 2;
 }
@@ -47,8 +52,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
   background-color: rgb(255, 238, 238);
+  transition: all linear 200ms;
+}
+.icon-card:hover {
+  transform: translateY(-5px);
 }
 mat-sidenav {
   width: 100%;
@@ -66,17 +75,34 @@ mat-card-content {
   mat-sidenav {
     width: 25%;
   }
+  .icons-container {
+    width: 70%;
+  }
+  .icon-card {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+  }
+  mat-card-content {
+    transform: scale(1.8);
+  }
 }
 /* Large desktop */
 @media (min-width: 980px) and (max-width: 1199px) {
   mat-sidenav {
     width: 35%;
   }
+  .icons-container {
+    width: 70%;
+  }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   mat-sidenav {
     width: 45%;
+  }
+  .icons-container {
+    width: 70%;
   }
 }
 /* Landscape phone to portrait tablet */
