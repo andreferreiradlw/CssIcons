@@ -23,10 +23,32 @@
   font-size: 1.5rem;
   padding: 5px;
 }
-#footer p {
-  font-size: 0.9rem;
-  color: rgb(103, 58, 183);
+#header a {
+  display: inline-block;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 1rem
 }
+.github-text::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+  transform: translateY(-5px);
+}
+.github-text:hover::after {
+  width: 100%;
+}
+#header svg {
+  width: 26px;
+  height: 26px;
+  fill: white;
+  margin-right: 5px;
+}
+
 .fill-remaining-space {
   /* This fills the remaining space, by using flexbox.
      Every toolbar row uses a flexbox row layout. */
@@ -34,7 +56,7 @@
 }
 .mat-toolbar-row, .mat-toolbar-single-row {
   height: auto;
-  padding: 5px 16px 0;
+  padding: 10px 16px;
 }
 .mat-form-field-infix {
   width: auto;
@@ -80,6 +102,7 @@
 }
 mat-sidenav {
   width: 100%;
+  position: fixed;
 }
 mat-card-content {
   display: flex;
@@ -94,7 +117,28 @@ mat-paginator {
   justify-content: center;
   align-items: center;
 }
+#footer p {
+  font-size: 0.9rem;
+  color: rgb(103, 58, 183);
+  margin-bottom: 25px;
+}
+#footer a {
+  display: inline-block;
+  color: rgb(103, 58, 183);
+  text-decoration: none;
+}
+#footer a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(103, 58, 183);
+  transition: width .3s;
+}
 
+#footer a:hover::after {
+  width: 100%;
+}
 /* Larger desktop */
 @media (min-width: 1200px) {
   #header h1 {

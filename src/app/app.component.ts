@@ -42,7 +42,6 @@ export class AppComponent implements OnInit {
       this.screenWidth = window.innerWidth;
     };
   }
-
   ngOnInit() {
     this.iconService.getData();
     // will get initial array of posts from server
@@ -51,7 +50,6 @@ export class AppComponent implements OnInit {
         this.iconCollection = iconData;
         console.log(this.iconCollection);
         this.totalPosts = this.iconCollection.length;
-        // this.onIconSlice();
         this.onSearch()
       });
   }
@@ -67,26 +65,12 @@ export class AppComponent implements OnInit {
     const start = this.iconsPerPage > -1 ? (this.currentPage - 1) * Number(this.iconsPerPage) : 0;
     const end = this.iconsPerPage > -1 ? (start + Number(this.iconsPerPage)) : this.iconFilterCollection.length;
     // debugger;
-    // slice cards
+    // slice icons
     this.slicedIcons = this.iconFilterCollection.slice(start, end);
   }
   onSearch() {
-    console.log(this.searchTerm);
     this.iconFilterCollection = this.iconFilter.transform(this.iconCollection, this.searchTerm);
     this.onIconSlice();
-  }
-  onContainerClick(event: any) {
-    const target = event.target || event.srcElement || event.currentTarget;
-    const idAttr = target.attributes.id;
-    // const value = idAttr.nodeValue;
-    if (idAttr.nodeValue !== undefined) {
-      // tslint:disable-next-line:max-line-length
-      if (idAttr.nodeValue === 'icons-container' || idAttr.nodeValue === 'icons-container-inner' || idAttr.nodeValue === 'master-container') {
-        if (this.emitIcon !== undefined) {
-          this.sidenavOpened = !this.sidenavOpened;
-        }
-      }
-    }
   }
   onIconClick(iconSelected: Icon) {
     if (this.emitIcon === iconSelected) {
