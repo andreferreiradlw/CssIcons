@@ -1,27 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav [mode]="(screenWidth > 768) ? 'side' : 'over'" position="end" [(opened)]="sidenavOpened">
+    <span class="closeSidenav" (click)="onCloseSidenav()">X</span>
     <app-icon-details [iconSelected]="emitIcon"></app-icon-details>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <div class="flex-container">
+    <div class="flex-container" id="master-container">
       <mat-toolbar color="primary" id="header">
         <h1><b>CSS Icons</b></h1>
         <!-- This fills the remaining space of the current row -->
         <span class="fill-remaining-space"></span>
       </mat-toolbar>
       <mat-form-field id="searchIcons" class="search-container">
-        <input matInput placeholder="Search Icon Library" [(ngModel)]="searchTerm" name="searchFilter">
+        <input matInput placeholder="Search Icon Library" [(ngModel)]="searchTerm" name="searchFilter" (input)="onSearch()">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
-      <mat-paginator [length]="100"
-        [pageSize]="10"
-        [pageSizeOptions]="[5, 10, 25, 100]">
-      </mat-paginator>
+      <!--Icon Container-->
       <div class="icons-container" (click)="onContainerClick($event)" id="icons-container">
         <div class="icons-container-inner" id="icons-container-inner">
-          <div id="icon-card-collection" *ngFor="let icon of iconCollection | iconFilter: searchTerm">
+          <div id="icon-card-collection" *ngFor="let icon of slicedIcons">
             <mat-card id="icon-card" class="icon-card" matTooltip="{{icon.formattedName()}}" matTooltipPosition="above"
               (click)="onIconClick(icon)">
               <mat-card-content id="icon-card-content">
@@ -32,8 +30,17 @@
               </mat-card-content>
             </mat-card>
           </div>
+          <div style="width:100%; margin-bottom: 2%;"></div>
+          <!--Material Paginator-->
+          <mat-paginator id="paginatorIcons"
+            [length]="totalPosts"
+            [pageSize]="iconsPerPage"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onChangedPage($event)"
+            *ngIf="iconFilterCollection.length > 20"></mat-paginator>
         </div>
       </div>
+      <!--Footer-->
       <div id="footer">
         <p><b>Built by Andre. Inspired by Wenting Zhang.</b></p>
       </div>

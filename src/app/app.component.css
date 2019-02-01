@@ -4,6 +4,21 @@
   margin: 0;
   padding: 0;
 }
+.closeSidenav {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px 8px;
+  border: 2px solid black;
+  z-index: 999;
+  transition: all 150ms linear;
+  font-weight: 700;
+}
+.closeSidenav:hover {
+  color: white;
+  background-color: rgb(103, 58, 183);
+  cursor: pointer;
+}
 #header h1 {
   font-size: 1.5rem;
   padding: 5px;
@@ -73,11 +88,24 @@ mat-card-content {
   cursor: pointer;
   transform: scale(1.5);
 }
+mat-paginator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Larger desktop */
 @media (min-width: 1200px) {
+  #header h1 {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+  #footer p {
+    font-size: 1rem;
+  }
   mat-sidenav {
-    width: 25%;
+    width: 30%;
   }
   .icons-container {
     width: 70%;

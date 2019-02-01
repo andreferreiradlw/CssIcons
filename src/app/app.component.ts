@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { IconCollectionService } from './iconCollection.service';
 import { Icon } from './icons.model';
 import { Subscription } from 'rxjs';
+import { IconFilterPipe } from './iconFilter.pipe';
+import { PageEvent } from '@angular/material';
+
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [IconFilterPipe]
 })
 export class AppComponent implements OnInit {
   events: string[] = [];
@@ -15,12 +19,22 @@ export class AppComponent implements OnInit {
   searchTerm: string;
   // icon collection
   iconCollection: Icon[] = [];
+  iconFilterCollection: Icon[] = [];
+  slicedIcons: Icon[] = [];
   private iconSub: Subscription;
   emitIcon: Icon;
   // responsive
   screenWidth: number;
+  // default pagination strings
+  // number of posts
+  totalPosts: number;
+  // page size
+  iconsPerPage = 20;
+  // current page
+  currentPage = 1;
+  pageSizeOptions = [20, 35, 50 , 70];
 
-  constructor(private iconService: IconCollectionService) {
+  constructor(private iconService: IconCollectionService, private iconFilter: IconFilterPipe) {
     // set screenWidth on page load
     this.screenWidth = window.innerWidth;
     window.onresize = () => {
@@ -33,18 +47,44 @@ export class AppComponent implements OnInit {
     this.iconService.getData();
     // will get initial array of posts from server
     this.iconSub = this.iconService.getCardUpdateListener()
-      .subscribe( iconData => {
+      .subscribe(iconData => {
         this.iconCollection = iconData;
         console.log(this.iconCollection);
+        this.totalPosts = this.iconCollection.length;
+        // this.onIconSlice();
+        this.onSearch()
       });
+  }
+  onChangedPage(pageData: PageEvent) {
+    // get pageData changes
+    this.currentPage = pageData.pageIndex + 1;
+    this.iconsPerPage = pageData.pageSize;
+    // debugger;
+    this.onIconSlice();
+  }
+  onIconSlice() {
+    // start and end
+    const start = this.iconsPerPage > -1 ? (this.currentPage - 1) * Number(this.iconsPerPage) : 0;
+    const end = this.iconsPerPage > -1 ? (start + Number(this.iconsPerPage)) : this.iconFilterCollection.length;
+    // debugger;
+    // slice cards
+    this.slicedIcons = this.iconFilterCollection.slice(start, end);
+  }
+  onSearch() {
+    console.log(this.searchTerm);
+    this.iconFilterCollection = this.iconFilter.transform(this.iconCollection, this.searchTerm);
+    this.onIconSlice();
   }
   onContainerClick(event: any) {
     const target = event.target || event.srcElement || event.currentTarget;
     const idAttr = target.attributes.id;
-    const value = idAttr.nodeValue;
-    if (value === 'icons-container' || value === 'icons-container-inner') {
-      if(this.emitIcon !== undefined) {
-        this.sidenavOpened = !this.sidenavOpened;
+    // const value = idAttr.nodeValue;
+    if (idAttr.nodeValue !== undefined) {
+      // tslint:disable-next-line:max-line-length
+      if (idAttr.nodeValue === 'icons-container' || idAttr.nodeValue === 'icons-container-inner' || idAttr.nodeValue === 'master-container') {
+        if (this.emitIcon !== undefined) {
+          this.sidenavOpened = !this.sidenavOpened;
+        }
       }
     }
   }
@@ -54,6 +94,11 @@ export class AppComponent implements OnInit {
     } else {
       this.emitIcon = iconSelected;
       this.sidenavOpened = true;
+    }
+  }
+  onCloseSidenav() {
+    if (this.sidenavOpened) {
+      this.sidenavOpened = !this.sidenavOpened;
     }
   }
 }

@@ -29,11 +29,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px
+  padding: 5px;
+  transition: all 150ms linear;
 }
 .codepen-button:hover {
   color: white;
   background-color: #673AB7;
+}
+.codepen-button svg {
+  transition: all 150ms linear;
 }
 .codepen-button:hover svg {
   stroke: white;
