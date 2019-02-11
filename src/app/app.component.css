@@ -116,6 +116,7 @@ mat-paginator {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
 }
 #footer p {
   font-size: 0.9rem;

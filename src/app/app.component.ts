@@ -14,6 +14,9 @@ import { PageEvent } from '@angular/material';
   providers: [IconFilterPipe]
 })
 export class AppComponent implements OnInit {
+  // loader
+  loading = true;
+  // event strings
   events: string[] = [];
   sidenavOpened: boolean;
   searchTerm: string;
@@ -29,10 +32,10 @@ export class AppComponent implements OnInit {
   // number of posts
   totalPosts: number;
   // page size
-  iconsPerPage = 20;
+  iconsPerPage = 50;
   // current page
   currentPage = 1;
-  pageSizeOptions = [20, 35, 50 , 70];
+  pageSizeOptions = [50 , 70, 100];
 
   constructor(private iconService: IconCollectionService, private iconFilter: IconFilterPipe) {
     // set screenWidth on page load
@@ -50,7 +53,7 @@ export class AppComponent implements OnInit {
         this.iconCollection = iconData;
         console.log(this.iconCollection);
         this.totalPosts = this.iconCollection.length;
-        this.onSearch()
+        this.onSearch();
       });
   }
   onChangedPage(pageData: PageEvent) {
@@ -64,9 +67,11 @@ export class AppComponent implements OnInit {
     // start and end
     const start = this.iconsPerPage > -1 ? (this.currentPage - 1) * Number(this.iconsPerPage) : 0;
     const end = this.iconsPerPage > -1 ? (start + Number(this.iconsPerPage)) : this.iconFilterCollection.length;
-    // debugger;
     // slice icons
     this.slicedIcons = this.iconFilterCollection.slice(start, end);
+    if (this.loading) {
+      this.loading = false;
+    }
   }
   onSearch() {
     this.iconFilterCollection = this.iconFilter.transform(this.iconCollection, this.searchTerm);

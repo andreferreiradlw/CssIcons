@@ -8,7 +8,7 @@ import { Icon } from './icons.model';
 })
 export class IconCollectionService {
 
-  private apiUrl = 'http://localhost:3000/api/icons';
+  private apiUrl = 'https://cssiconsapi.herokuapp.com/api/icons';
   private iconCollectionUpdated = new Subject<Icon[]>();
   constructor(private http: HttpClient) { }
   // get icons

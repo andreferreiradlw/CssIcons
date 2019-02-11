@@ -23,6 +23,12 @@
         <input matInput placeholder="Search Icon Library" [(ngModel)]="searchTerm" name="searchFilter" (input)="onSearch()">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
+      <!--Loader-->
+      <mat-progress-spinner
+        color="primary"
+        mode="indeterminate"
+        *ngIf="loading">
+      </mat-progress-spinner>
       <!--Icon Container-->
       <div class="icons-container" id="icons-container">
         <div class="icons-container-inner" id="icons-container-inner">
@@ -44,7 +50,7 @@
             [pageSize]="iconsPerPage"
             [pageSizeOptions]="pageSizeOptions"
             (page)="onChangedPage($event)"
-            *ngIf="iconFilterCollection.length > 20"></mat-paginator>
+            *ngIf="iconFilterCollection.length > 49"></mat-paginator>
         </div>
       </div>
       <!--Footer-->
