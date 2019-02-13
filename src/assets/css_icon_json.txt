@@ -1,0 +1,67 @@
+{
+   
+"name": "",
+  
+"classNames": "",
+  
+"htmlChildMarkup": false,
+ 
+"style": "line",
+ 
+"tags": [
+
+],
+ 
+"cssHidden": "",
+
+"cssMarkup": "",
+  
+"cssMarkupBefore": "",
+  
+"cssMarkupAfter": "",
+  
+"cssChildMarkup": "",
+  
+"cssChildMarkupBefore": "",
+  
+"cssChildMarkupAfter": ""
+
+}
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" position="end" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+CODEPEN---------------------------------------------------------------
+
+var generateCodepenString = function(icon){
+    var html = generateHTML(icon);
+    var css = generateCSS(icon);
+    if (icon.cssHidden) {
+      css += icon.cssHidden + '\n';
+    }
+    var title = icon.name;
+    
+    var data = {
+      title                 : "CSS ICON: " + title,
+      description           : title + " icon created with pure CSS, CSS ICON created via http://cssicon.space/",
+      tags                  : ["CSS", "ICON", "CSSICON"],
+      editors               : "110", 
+      layout                : "left", // top | left | right
+      html                  : html,
+      css                   : css,
+    }
+    return JSON.stringify(data).replace(/"/g, "&?quot;").replace(/'/g, "&apos;");
+  }

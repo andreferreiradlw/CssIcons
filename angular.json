@@ -24,6 +24,7 @@
             ],
             "styles": [
               "src/icon-styles.css",
+              "src/icon-styles-2.css",
               "src/styles.css"
             ],
             "scripts": [

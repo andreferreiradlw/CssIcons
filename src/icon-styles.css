@@ -798,23 +798,639 @@
   background-color: currentColor;
   border-radius: 5px 5px 0 0;
 }
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
+/*heart icon*/
+.heart.icon:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  width: 5px;
+  height: 9px;
+  border-radius: 0 5px 5px 0;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+.heart.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  width: 9px;
+  height: 6px;
+  border-radius: 5px 5px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.heart.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 9px;
+  height: 9px;
+  border-left: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.heart-solid.icon:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  width: 5px;
+  height: 9px;
+  border-radius: 0 5px 5px 0;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: currentColor;
+}
+.heart-solid.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  width: 9px;
+  height: 6px;
+  border-radius: 5px 5px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  background-color: currentColor;
+}
+.heart-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 9px;
+  height: 9px;
+  border-left: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*Print Icon*/
+.print.icon:after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -1px;
+  width: 13px;
+  height: 3px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: white;
+}
+.print.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -3px;
+  height: 13px;
+  width: 9px;
+  border: solid 1px currentColor;
+  background-color: white;
+}
+.print.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 15px;
+  height: 6px;
+  border: solid 1px currentColor;
+  border-radius: 1px 1px 0 0;
+}
+.print-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -1px;
+  width: 13px;
+  height: 3px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: currentColor;
+}
+.print-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -3px;
+  height: 13px;
+  width: 9px;
+  border: solid 1px currentColor;
+  background-color: white;
+}
+.print-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 15px;
+  height: 6px;
+  border-radius: 1px 1px 0 0;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Edit Icon*/
+.edit.icon:before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: -2px;
+  width: 0px;
+  height: 0px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px currentColor;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+}
+.edit.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 7px;
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.edit-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: -2px;
+  width: 0px;
+  height: 0px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px currentColor;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+}
+.edit-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 7px;
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*Link Icon*/
+.link.icon:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -7px;
+  width: 8px;
+  height: 5px;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+}
+.link.icon:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  width: 8px;
+  height: 5px;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+}
+.link.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 7px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*Map Icon*/
+.map.icon:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: -3px;
+  width: 4px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  -webkit-transform: skewY(-40deg);
+          transform: skewY(-40deg);
+}
+.map.icon:before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 1px;
+  width: 4px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  -webkit-transform: skewY(-40deg);
+          transform: skewY(-40deg);
+}
+.map.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 4px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+}
+/*Mail Icon*/
+.mail.icon:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -4px;
+  width: 1px;
+  height: 8px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+.mail.icon:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -4px;
+  width: 1px;
+  height: 8px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(-54deg);
+          transform: rotate(-54deg);
+}
+.mail.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.mail-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -4px;
+  width: 1px;
+  height: 8px;
+  color: white;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+.mail-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -4px;
+  width: 1px;
+  height: 8px;
+  color: white;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(-54deg);
+          transform: rotate(-54deg);
+}
+.mail-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Bookmark Icon*/
+.bookmark.icon:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0.5px;
+  width: 7px;
+  height: 7px;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.bookmark.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 10px;
+  height: 15px;
+  border-radius: 1px 1px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.bookmark-solid.icon:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0.5px;
+  width: 7px;
+  height: 7px;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.bookmark-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 10px;
+  height: 15px;
+  border-radius: 1px 1px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Camera Icon*/
+.camera.icon:after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px 1px 0 0;
+  background-color: currentColor;
+}
+.camera.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 3px;
+  border: solid 1px currentColor;
+}
+.camera.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 16px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.camera-solid.icon:after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px 1px 0 0;
+  background-color: currentColor;
+}
+.camera-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 3px;
+  color: white;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+.camera-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 16px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Focus Icon*/
+.focus.icon:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  width: 7px;
+  height: 17px;
+  color: white;
+  background-color: currentColor;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.focus.icon:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  width: 7px;
+  height: 17px;
+  color: white;
+  background-color: currentColor;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.focus.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+/*Card Icon*/
+.card.icon:after {
+  content: '';
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 4px;
+  height: 1px;
+  background-color: currentColor;
+}
+.card.icon:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  width: 15px;
+  height: 2px;
+  background-color: currentColor;
+}
+.card.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.card-solid.icon:after {
+  content: '';
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 4px;
+  height: 1px;
+  color: white;
+  background-color: currentColor;
+}
+.card-solid.icon:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  width: 15px;
+  height: 2px;
+  color: white;
+  background-color: currentColor;
+}
+.card-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Lock Icon*/
+.lock.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  width: 7px;
+  height: 6px;
+  border-radius: 4px 4px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.lock.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 13px;
+  height: 8px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.lock-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  width: 7px;
+  height: 6px;
+  border-radius: 4px 4px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.lock-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 13px;
+  height: 8px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Unlock Icon*/
+.unlock.icon:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -4px;
+  width: 1px;
+  height: 3px;
+  background-color: currentColor;
+}
+.unlock.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  width: 7px;
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.unlock.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 13px;
+  height: 8px;
+  border: solid 1px currentColor;
+  border-radius: 1px;
+}
+.unlock-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -4px;
+  width: 1px;
+  height: 3px;
+  background-color: currentColor;
+}
+.unlock-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  width: 7px;
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.unlock-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 13px;
+  height: 8px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}

@@ -1,0 +1,718 @@
+/*Code Icon*/
+.code.icon:after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-bottom: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.code.icon:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border-left: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.code.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 19px;
+  height: 13px;
+}
+/*Flag Icon*/
+.flag.icon:before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -2px;
+  width: 1px;
+  height: 15px;
+  background-color: currentColor;
+}
+.flag.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 9px;
+  height: 6px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.flag-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -2px;
+  width: 1px;
+  height: 15px;
+  background-color: currentColor;
+}
+.flag-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 9px;
+  height: 6px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Tag Icon*/
+.tag.icon:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.tag.icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.tag.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px 1px 1px 0;
+  border-left: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+}
+.tag-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  color: white;
+  background-color: currentColor;
+}
+.tag-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.tag-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px 1px 1px 0;
+  border-left: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Signal Icon*/
+.signal.icon:after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  border-left: solid 1px transparent;
+}
+.signal.icon:before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  border-left: solid 1px transparent;
+}
+.signal.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 13px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  border-left: solid 1px transparent;
+  transform: translateY(5px);
+}
+/*Export Icon*/
+.export.icon:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: -5px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.export.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  width: 1px;
+  height: 8px;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+  background-color: currentColor;
+}
+.export.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 10px;
+  width: 12px;
+  height: 9px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+/*Upload Icon*/
+.upload.icon:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 4.5px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.upload.icon:before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 6px;
+  width: 1px;
+  height: 7px;
+  background-color: currentColor;
+}
+.upload.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 14px;
+  width: 15px;
+  height: 4px;
+  border: solid 1px currentColor;
+  border-top: none;
+  border-radius: 1px;
+}
+/*Import Icon*/
+.import.icon:after {
+  content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 4px;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.import.icon:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 3px;
+  width: 1px;
+  height: 10px;
+  background-color: currentColor;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+}
+.import.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 14px;
+  height: 11px;
+  border: solid 1px currentColor;
+  border-radius: 1px;
+}
+/*Download Icon*/
+.download.icon:after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: -3px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.download.icon:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -6px;
+  width: 1px;
+  height: 7px;
+  background-color: currentColor;
+}
+.download.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 12px;
+  width: 15px;
+  height: 4px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  border-top: none;
+}
+/*Upload 2 Icon*/
+.upload2.icon:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.upload2.icon:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  width: 1px;
+  height: 10px;
+  background-color: currentColor;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+}
+.upload2.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 12px;
+  height: 11px;
+  border: solid 1px currentColor;
+  border-radius: 1px;
+}
+/*Shutdown Icon*/
+.shutdown.icon:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  width: 7px;
+  height: 7px;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+  background-color: currentColor;
+}
+.shutdown.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+}
+/*Paperclip Icon*/
+.paperclip.icon:after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 3px;
+  height: 10px;
+  border-radius: 4px 4px 0 0;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+}
+.paperclip.icon:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -1px;
+  width: 5px;
+  height: 6px;
+  border-radius: 0 0 3px 3px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+.paperclip.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 4px;
+  width: 7px;
+  height: 12px;
+  border-radius: 4px 4px 0 0;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*Retweet Icon*/
+.retweet.icon:after {
+  content: '';
+  position: absolute;
+  right: -3.5px;
+  bottom: -2px;
+  width: 0;
+  height: 0;
+  border-top: solid 3px currentColor;
+  border-bottom: solid 3px white;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+}
+.retweet.icon:before {
+  content: '';
+  position: absolute;
+  left: -3.5px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border-top: solid 3px white;
+  border-bottom: solid 3px currentColor;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+}
+.retweet.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 5px;
+  width: 13px;
+  height: 9px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+/*Key Icon*/
+.key.icon:after {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 3px;
+  width: 1px;
+  height: 3px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.key.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 11px;
+  height: 1px;
+  background-color: currentColor;
+}
+.key.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+}
+.key-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 3px;
+  width: 1px;
+  height: 3px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.key-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 11px;
+  height: 1px;
+  background-color: currentColor;
+}
+.key-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Key 2 Icon*/
+.key2.icon:after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0px;
+  width: 1px;
+  height: 3px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.key2.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2.5px;
+  width: 12px;
+  height: 1px;
+  background-color: currentColor;
+}
+.key2.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.key2-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0px;
+  width: 1px;
+  height: 3px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.key2-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2.5px;
+  width: 12px;
+  height: 1px;
+  background-color: currentColor;
+}
+.key2-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+/*Refresh Icon*/
+.refresh.icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  -webkit-transform: rotate(-22.5deg);
+  transform: rotate(-22.5deg);
+}
+.refresh.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  border-left: solid 1px transparent;
+  border-right: solid 1px currentColor;
+}
+/*Pilcrow Icon*/
+.pilcrow.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: -1px;
+  height: 16px;
+  width: 2px;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.pilcrow.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px 0 0 5px;
+  border-left: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+.pilcrow-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: -1px;
+  height: 16px;
+  width: 2px;
+  border-top: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.pilcrow-solid.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px 0 0 5px;
+  border-left: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  background-color: currentColor;
+}
+/*Justified Icon*/
+.justified.icon:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 17px;
+  height: 5px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+.justified.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 17px;
+  height: 5px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+/*Paragraph Direction Icon*/
+.paragraph-direction.icon:after {
+  content: '';
+  position: absolute;
+  top: 3.4px;
+  left: 6px;
+  width: 0;
+  height: 0;
+  border-left: solid 2px white;
+  border-right: solid 2px currentColor;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+}
+.paragraph-direction.icon:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 17px;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+.paragraph-direction.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 17px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+/*Left Align Icon*/
+.left-align.icon:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 11px;
+  height: 5px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+.left-align.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 6px;
+  width: 17px;
+  height: 5px;
+  border-top: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
