@@ -74,7 +74,11 @@ export class AppComponent implements OnInit {
     }
   }
   onSearch() {
+    // current page back to 1
+    this.currentPage = 1;
+    // pipe filter
     this.iconFilterCollection = this.iconFilter.transform(this.iconCollection, this.searchTerm);
+    // slice
     this.onIconSlice();
   }
   onIconClick(iconSelected: Icon) {

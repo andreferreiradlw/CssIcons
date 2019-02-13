@@ -65,6 +65,9 @@
   width: 70%;
   margin: 3% 0 1%;
 }
+mat-icon{
+  font-family: 'Material Icons' !important;
+}
 .flex-container {
   display: flex;
   flex-direction: column;
